@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Uni Glass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'light-gray': '#f8f8f8',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+<body class="bg-light-gray">
+    <!-- Header -->
+    <header class="bg-light-gray py-4 px-6 md:px-16 flex justify-between items-center">
+        <div>
+            <a href="uniglass.html">
+                <h1 class="text-xl font-bold">Uni Glass</h1>
+            </a>
+        </div>
+        <div class="flex items-center">
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="uniglass.html" class="text-gray-400 hover:text-gray-700">Home</a></li>
+                    <li><a href="all-products.html" class="text-gray-400 hover:text-gray-700">Shop</a></li>
+                    <li><a href="#" class="text-gray-500 font-semibold">About</a></li>
+                </ul>
+            </nav>
+            <div class="flex items-center ml-8">
+                <a href="login.html" class="flex items-center text-gray-700 hover:text-gray-900 mr-6">
+                    <i class="fas fa-user mr-2"></i>
+                    <span>Log In</span>
+                </a>
+                <a href="cart.html" class="text-gray-700 hover:text-gray-900">
+                    <div class="relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="absolute -top-2 -right-2 bg-gray-200 rounded-full h-5 w-5 flex items-center justify-center text-xs">0</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="w-full py-12 px-6 md:px-16">
+        <div class="container mx-auto">
+            <h1 class="text-4xl font-bold text-center mb-8">OUR STORY & PHILOSOPHY</h1>
+
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <p class="text-gray-700 leading-relaxed">
+                    Uniglass adalah platform inovatif yang membantu pengguna menemukan kacamata yang sempurna sesuai dengan kebutuhan dan gaya mereka. Kami menghadirkan pengalaman berbelanja yang interaktif dan nyaman. Uniglass tidak hanya menyediakan berbagai pilihan kacamata berkualitas, tetapi juga memberikan rekomendasi berdasarkan gaya hidup, dan kebutuhan visual pengguna. Kami berkomitmen untuk menghadirkan produk berkualitas tinggi dengan desain modern dan perlindungan maksimal, memastikan setiap pelanggan mendapatkan kacamata yang tidak hanya fungsional tetapi juga stylish.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Image Section -->
+    <section class="w-full px-6 md:px-16 mb-12">
+        <div class="container mx-auto">
+            <div class="bg-white shadow-md">
+                <img src="https://static.wixstatic.com/media/7cd043de7c2f46a7ad664c021251a5c2.jpg/v1/crop/x_1,y_142,w_5615,h_3480/fill/w_980,h_607,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Kacamata%20uji%20optometri.jpg" alt="Uni Glass Vision" class="w-full h-auto object-cover" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-12 pb-6 px-6 md:px-16">
+        <div class="mb-8">
+            <h3 class="text-gray-700 mb-6 text-center md:text-left">Uni Glass</h3>
+
+            <div class="flex flex-col md:flex-row text-center md:text-left">
+                <div class="md:w-1/3 mb-4 md:mb-0">
+                    <a href="#" class="block text-gray-500 mb-2">FAQ</a>
+                    <a href="#" class="block text-gray-500 mb-2">Shipping & Returns</a>
+                </div>
+                <div class="md:w-1/3 mb-4 md:mb-0">
+                    <a href="#" class="block text-gray-500 mb-2">Store Policy</a>
+                    <a href="#" class="block text-gray-500 mb-2">Payment Methods</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Maps Embed -->
+        <div class="w-full h-64 mb-6">
+            <iframe
+                class="w-full h-full"
+                frameborder="0"
+                style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Makassar,Indonesia"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center text-sm text-gray-500 mb-8">
+            © 2035 by Uni Glass. Powered and secured by Wix
+        </div>
+
+        <!-- Social Icons -->
+        <div class="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4">
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+
+        <!-- Chat Button -->
+        <div class="fixed bottom-6 right-6">
+            <button class="bg-black text-white px-4 py-2">CHAT WITH US</button>
+        </div>
+</body>
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uni Glass</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'light-gray': '#f8f8f8',
+                        'wix-pink': '#e8518d',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+        }
+        .product-hover {
+            position: relative;
+            overflow: hidden;
+        }
+        .product-hover .add-to-cart {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            transition: bottom 0.3s ease;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+        .product-hover:hover .add-to-cart {
+            bottom: 0;
+        }
+    </style>
+</head>
+<body class="bg-light-gray">
+    <!-- Header -->
+    <header class="bg-light-gray py-4 px-6 md:px-16 flex justify-between items-center">
+        <div>
+            <a href="uniglass.html">
+                <h1 class="text-xl font-bold">Uni Glass</h1>
+            </a>
+        </div>
+        <div class="flex items-center">
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="uniglass.html" class="text-gray-400 hover:text-gray-700">Home</a></li>
+                    <li><a href="#" class="text-gray-500 font-semibold">Shop</a></li>
+                    <li><a href="about.html" class="text-gray-400 hover:text-gray-700">About</a></li>
+                </ul>
+            </nav>
+            <div class="flex items-center ml-8">
+                <a href="login.html" class="flex items-center text-gray-700 hover:text-gray-900 mr-6">
+                    <i class="fas fa-user mr-2"></i>
+                    <span>Log In</span>
+                </a>
+                <a href="cart.html" class="text-gray-700 hover:text-gray-900">
+                    <div class="relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="absolute -top-2 -right-2 bg-gray-200 rounded-full h-5 w-5 flex items-center justify-center text-xs">1</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8 flex">
+        <!-- Left Sidebar -->
+        <div class="w-64 pr-8 hidden md:block">
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold mb-4">Browse by</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-600">All Products</a></li>
+                    <li><a href="#" class="text-gray-600">Kacamata anak</a></li>
+                    <li><a href="#" class="text-gray-600">Kacamata Gaya</a></li>
+                    <li><a href="#" class="text-gray-600">Kacamata Hitam</a></li>
+                    <li><a href="#" class="text-gray-600">Kacamata Baca</a></li>
+                </ul>
+            </div>
+
+            <div class="mb-8">
+                <h3 class="text-lg font-semibold mb-4">Filter by</h3>
+                <div class="mb-4">
+                    <label class="block text-gray-700 mb-2">Price</label>
+                    <div class="flex items-center">
+                        <input type="range" min="18" max="85" class="w-full" />
+                    </div>
+                    <div class="flex justify-between text-sm text-gray-600 mt-2">
+                        <span>IDR 18</span>
+                        <span>IDR 85</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Products Section -->
+        <div class="flex-grow">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <!-- Kacamata Baca -->
+                <div class="product-hover">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/d96316_fdced3afcc44485a86c64f064556a122~mv2.png/v1/fill/w_580,h_420,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/d96316_fdced3afcc44485a86c64f064556a122~mv2.png" alt="Kacamata Baca" class="w-full h-64 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-gray-600 text-center">Kacamata Baca</h3>
+                            <p class="text-gray-500 text-center">Rp25.00</p>
+                        </div>
+                        <div class="add-to-cart">
+                            <form action="cart.html">
+                                <button class="w-full py-2">Add to Cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kacamata gaya -->
+                <div class="product-hover">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/d96316_e514d80d9d2b4d6a9abc6fa31a44a675~mv2.png/v1/fill/w_580,h_420,al_c,lg_1,q_85,enc_avif,quality_auto/d96316_e514d80d9d2b4d6a9abc6fa31a44a675~mv2.png" alt="Kacamata gaya" class="w-full h-64 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-gray-600 text-center">Kacamata gaya</h3>
+                            <p class="text-gray-500 text-center">Rp38.00</p>
+                        </div>
+                        <div class="add-to-cart">
+                            <form action="cart.html">
+                                <button class="w-full py-2">Add to Cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kacamata gaya 2 (Best Seller) -->
+                <div class="product-hover relative">
+                    <div class="absolute top-2 left-2 bg-black text-white px-2 py-1 text-xs z-10">Best Seller</div>
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/d96316_7cd8e58f5775495b8f206de19f1bfa24~mv2.jpg/v1/fill/w_580,h_420,al_c,lg_1,q_80,enc_avif,quality_auto/d96316_7cd8e58f5775495b8f206de19f1bfa24~mv2.jpg" alt="Kacamata gaya 2" class="w-full h-64 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-gray-600 text-center">Kacamata gaya 2</h3>
+                            <p class="text-gray-500 text-center">Rp18.00</p>
+                        </div>
+                        <div class="add-to-cart">
+                            <form action="cart.html">
+                                <button class="w-full py-2">Add to Cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kacamata anak -->
+                <div class="product-hover">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <img src="https://static.wixstatic.com/media/d96316_745ff9f8b9844f00b3973dd5deca4a80~mv2.webp/v1/fill/w_580,h_420,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/d96316_745ff9f8b9844f00b3973dd5deca4a80~mv2.webp" alt="Kacamata anak" class="w-full h-64 object-cover" />
+                        <div class="p-4">
+                            <h3 class="text-gray-600 text-center">Kacamata anak</h3>
+                            <p class="text-gray-500 text-center">Rp85.00</p>
+                        </div>
+                        <div class="add-to-cart">
+                            <form action="cart.html">
+                                <button class="w-full py-2">Add to Cart</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-white pt-12 pb-6 px-6 md:px-16">
+        <div class="mb-8">
+            <h3 class="text-gray-700 mb-6 text-center md:text-left">Uni Glass</h3>
+
+            <div class="flex flex-col md:flex-row text-center md:text-left">
+                <div class="md:w-1/3 mb-4 md:mb-0">
+                    <a href="#" class="block text-gray-500 mb-2">FAQ</a>
+                    <a href="#" class="block text-gray-500 mb-2">Shipping & Returns</a>
+                </div>
+                <div class="md:w-1/3 mb-4 md:mb-0">
+                    <a href="#" class="block text-gray-500 mb-2">Store Policy</a>
+                    <a href="#" class="block text-gray-500 mb-2">Payment Methods</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Maps Embed -->
+        <div class="w-full h-64 mb-6">
+            <iframe
+                class="w-full h-full"
+                frameborder="0"
+                style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Makassar,Indonesia"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center text-sm text-gray-500 mb-8">
+            © 2035 by Uni Glass. Powered and secured by Wix
+        </div>
+
+        <!-- Social Icons -->
+        <div class="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-4">
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-gray-600 hover:text-gray-900"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+
+        <!-- Chat Button -->
+        <div class="fixed bottom-6 right-6">
+            <button class="bg-black text-white px-4 py-2">CHAT WITH US</button>
+        </div>
+    </footer>
+</body>
+</html>
